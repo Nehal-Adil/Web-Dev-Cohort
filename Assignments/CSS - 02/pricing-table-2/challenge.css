@@ -1,5 +1,16 @@
 /* Challenge CSS */
 
+:root {
+  --primary-pink-light: #fe6a6b;
+  --primary-blue: #3b82f6;
+  --primary-blue-dark: #2563eb;
+  --primary-yeelow: #ffd83c;
+  --gray-400: #878786;
+  --gray-800: #686868;
+  --neutral-800: #272726;
+  --neutral-900: #1b1a1b;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,98 +20,200 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f5f5f5;
+  background-color: var(--neutral-900);
 }
 
-.container {
-  /* Add your styles here */
-}
+/* .container {
+  height: 100vh;
+} */
 
 .header {
-  /* Add your styles here */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+  gap: 0rem;
 }
 
 h1 {
-  /* Add your styles here */
+  font-size: 3rem;
+  color: var(--primary-pink-light);
 }
 
 .subtitle {
-  /* Add your styles here */
+  color: var(--gray-400);
 }
 
 .pricing-container {
-  /* Add your styles here */
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin: 2rem 0;
 }
 
 .pricing-card {
-  /* Add your styles here */
+  width: 20%;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  position: relative;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ff6b6b;
+  transition: all 0.3s linear;
 }
 
 .pricing-card:hover {
-  /* Add your styles here */
+  transform: scale(1.05);
+  transition: all 0.3s linear;
 }
 
 .card-header {
-  /* Add your styles here */
+  font-size: 1rem;
+  color: #fff;
 }
 
 .icon {
-  /* Add your styles here */
+  font-size: 2.5rem;
 }
 
 .popular-tag {
-  /* Add your styles here */
+  background-color: #ffd93d;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 6px 16px;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  white-space: nowrap;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .price-block {
-  /* Add your styles here */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1.25rem 0;
+  background-color: #303030;
+  border-radius: 1em;
 }
 
 .price {
-  /* Add your styles here */
+  color: var(--primary-pink-light);
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .period {
-  /* Add your styles here */
+  font-size: 0.75rem;
+  color: var(--gray-400);
 }
 
 .features {
-  /* Add your styles here */
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  font-size: 1rem;
+  text-align: left;
+  color: #ddd;
 }
 
 .features li {
-  /* Add your styles here */
+  margin: 1rem 0;
 }
 
 .features li.disabled {
-  /* Add your styles here */
+  color: var(--gray-400);
+  opacity: 0.6;
 }
 
 .join-btn {
-  /* Add your styles here */
+  text-align: center;
+  width: 100%;
+  padding: 1rem 0;
+  border-radius: 0.75rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #1a1a1a;
+  border: 1px solid #ff6b6b;
+  transition: all 0.3s ease;
 }
 
-.join-btn:hover {
-  /* Add your styles here */
+.beginner {
+  background-color: #262626;
+  border: 2px solid #3c3c3c;
 }
 
-/* Custom Class Modifiers */
+.beginner .price {
+  color: #ff6b6b;
+}
+
+.beginner .join-btn {
+  color: #a1a1a1;
+  border: 2px solid #303030;
+  background-color: transparent;
+}
+
+.beginner .join-btn:hover {
+  cursor: pointer;
+  background-color: #303030;
+  color: #fff;
+}
+
 .warrior {
-  /* Add your styles here */
+  background-color: #312222;
+  border: 1px solid #fc7575bf;
+}
+
+.warrior .price-block {
+  background-color: #3c2d2d;
+}
+
+.warrior .price {
+  color: #ff6b6b;
+}
+
+.warrior .join-btn {
+  color: #ff6b6b;
+  border: 1px solid #ff6b6b;
+  background-color: transparent;
+}
+
+.warrior .join-btn:hover {
+  background-color: #ff6b6b;
+  color: #312222;
 }
 
 .champion {
-  /* Add your styles here */
+  background-color: #312d1d;
+  border: 1px solid #f9d440d4;
+}
+
+.champion .price-block {
+  background-color: #3c3829;
 }
 
 .champion .price {
-  /* Add your styles here */
+  color: #ffd93d;
 }
 
 .champion .join-btn {
-  /* Add your styles here */
+  color: #ffd93d;
+  border: 1px solid #ffd93d;
+  background-color: transparent;
 }
 
 .champion .join-btn:hover {
-  /* Add your styles here */
+  background-color: #ffd93d;
+  color: #312d1d;
 }
