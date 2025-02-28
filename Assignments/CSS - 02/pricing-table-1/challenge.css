@@ -13,57 +13,120 @@ body {
 }
 
 .container {
-  /* Add your styles here */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
-  /* Add your styles here */
+  font-size: 3rem;
 }
 
 .pricing-heading {
-  /* Add your styles here */
+  /* border: 1px solid; */
+  margin-top: 1em;
 }
 
 .pricing-container {
-  /* Add your styles here */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-top: 4rem;
+  gap: 2rem;
 }
 
 .pricing-card {
-  /* Add your styles here */
+  /* background-color: #ff9696; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2em 1em;
+  margin: 0 1.5em;
+  border-radius: 13px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .pricing-card:hover {
-  /* Add your styles here */
+  transition: all 0.3s ease-in-out;
+  transform: scale(105%);
+}
+
+.pricing-card h2 {
+  font-size: 2rem;
 }
 
 .pricing-card.popular {
-  /* Add your styles here */
+  position: relative;
+  border: 2px solid #ff7300;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .popular-badge {
-  /* Add your styles here */
+  background-color: #ff7300;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 7px 15px;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .price {
-  /* Add your styles here */
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
 }
 
 .period {
-  /* Add your styles here */
+  opacity: 50%;
+  font-size: 0.9rem;
 }
 
 .features {
-  /* Add your styles here */
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  font-size: 1.45rem;
+  text-align: center;
 }
 
 .features li {
-  /* Add your styles here */
+  margin: 0;
+  padding: 0.2rem 0 0 3rem;
+  background-image: url("https://cdn.pixabay.com/photo/2020/03/15/06/41/cup-of-tea-4932577_1280.png");
+  background-repeat: no-repeat;
+  background-size: 40px;
+}
+
+#first {
+  height: 65%;
+}
+#second {
+  height: 80%;
+}
+#third {
+  height: 75%;
 }
 
 .subscribe-btn {
-  /* Add your styles here */
+  padding: 0.75rem 1.5rem;
+  margin-top: auto;
+  background-color: #ff9533;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.75rem;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .subscribe-btn:hover {
-  /* Add your styles here */
+  box-shadow: 0px 5px 8px rgb(175, 79, 0);
+  background-color: #ff953d;
 }
