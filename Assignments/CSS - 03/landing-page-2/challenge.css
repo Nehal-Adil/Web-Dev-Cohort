@@ -1,0 +1,152 @@
+/* Challenge CSS */
+:root {
+  --indigo-green: #00fc9d;
+  --light-white: #ddd;
+  --light-grey: #2a2b2b;
+  --dark-grey: #1a1a1a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  background-color: var(--dark-grey);
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem auto;
+  width: 95%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: var(--indigo-green);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.logo img {
+  border: 2px solid var(--indigo-green);
+  border-radius: 50%;
+  margin-right: 0.75rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--light-white);
+  margin: 0 0.75rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.menu a:hover {
+  color: #fff;
+  text-shadow: 0 0 5px var(--indigo-green);
+}
+
+/* Hero section styles */
+.hero {
+  height: 65vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("./assets/chaicohort.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+  color: var(--indigo-green);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: var(--light-white);
+}
+
+.hero-content img {
+  border: 2px solid var(--indigo-green);
+  border-radius: 13px;
+}
+
+.enroll-button {
+  font-size: 1.5rem;
+  padding: 0.65rem 2rem;
+  background-color: var(--indigo-green);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.enroll-button:hover {
+  transform: scaleX(1.1);
+  box-shadow: 0 5px 15px rgba(134, 255, 53, 0.658);
+}
+
+/* Highlights section styles */
+.highlights {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 25vh;
+}
+
+.highlight-card {
+  border: none;
+  border-radius: 13px;
+  background-color: var(--light-grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 15%;
+  height: 80%;
+}
+
+.highlight-card h3 {
+  color: var(--indigo-green);
+}
+
+.highlight-card p {
+  text-align: center;
+  color: var(--light-white);
+}
+
+@media (max-width: 530px) {
+  .navbar a {
+    display: none;
+  }
+  .hero {
+    height: 100%;
+  }
+  .highlights {
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+  .highlight-card {
+    flex-direction: row;
+    width: 90%;
+  }
+}
