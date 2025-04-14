@@ -1,0 +1,180 @@
+/* Challenge CSS */
+:root {
+  --dark-red: #8b4513;
+  --light-white: #ddd;
+  --very-light-grey: #e0e0e2;
+  --light-grey: #2a2b2b;
+  --dark-grey: #1a1a1a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Georgia", serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.header {
+  /* border: 2px solid yellowgreen; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 1.5rem;
+}
+
+.menu {
+  display: none;
+  height: 50px;
+  width: 50px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: var(--dark-red);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.logo img {
+  border: 2px solid var(--dark-red);
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  padding: 0.125rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--dark-red);
+  margin: 0 0.75rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-menu a:hover {
+  color: #8b5126;
+  text-shadow: 0 0 5px var(--dark-red);
+}
+
+.hero {
+  height: 70vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./assets/chaipatti.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+  padding: 0 1rem;
+  color: #fff;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.shop-button {
+  font-size: 1.5rem;
+  padding: 0.65rem 2rem;
+  background-color: var(--dark-red);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.shop-button:hover {
+  background-color: #925022;
+  transform: scaleX(1.1);
+  box-shadow: 0 5px 15px rgba(204, 71, 67, 0.568);
+}
+
+.tea-collection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  height: 80vh;
+}
+
+.tea-collection h2 {
+  font-size: 2rem;
+  color: var(--dark-red);
+}
+
+.tea-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-row-gap: 2rem;
+  grid-column-gap: 5rem;
+  width: 70%;
+}
+
+.tea-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #f8f8f8;
+  padding: 1.75rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.tea-card h3 {
+  font-size: 1.2rem;
+  color: var(--dark-red);
+}
+
+.tea-card p {
+  font-size: 0.85rem;
+  color: #6b6b6b;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-menu a {
+    display: none;
+  }
+
+  .hero {
+    width: max-content;
+  }
+
+  .tea-collection {
+    margin-top: 1rem;
+    display: block;
+    text-align: center;
+    width: max-content;
+  }
+
+  .tea-card {
+    width: 100%;
+  }
+}
