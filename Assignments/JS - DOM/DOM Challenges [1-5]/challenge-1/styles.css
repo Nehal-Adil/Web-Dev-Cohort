@@ -72,3 +72,10 @@ button:hover {
   margin-top: 20px;
   font-weight: bold;
 }
+
+footer {
+  color: #333;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
