@@ -1,0 +1,21 @@
+body {
+  background-color: rgba(67, 67, 67, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+input,
+button {
+  padding: 10px;
+  font-size: 16px;
+  margin: 5px;
+  border-radius: 13px;
+}
