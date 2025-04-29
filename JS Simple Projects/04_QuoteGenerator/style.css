@@ -1,0 +1,37 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(
+    69.2deg,
+    rgba(77, 143, 251, 1) 35.3%,
+    rgba(202, 51, 255, 1) 100.3%
+  );
+}
+
+.container {
+  text-align: center;
+  max-width: 500px;
+  padding: 20px;
+}
+
+#quoteDisplay {
+  font-size: 1.5em;
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #ddd;
+  border-radius: 13px;
+}
+
+button:hover {
+  background-color: #ffffff;
+}
