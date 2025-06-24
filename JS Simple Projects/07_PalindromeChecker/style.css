@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #252525;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Container Styling */
+.container {
+  background: #191919;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 8px rgb(0 0 0 / 51%);
+  text-align: center;
+  width: 350px;
+}
+
+/* Heading */
+h1 {
+  color: #ddd;
+  margin-bottom: 15px;
+}
+
+/* Labels */
+label {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0 5px;
+  text-align: left;
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Button */
+button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* Tip Display */
+p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+}
