@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -48,7 +48,7 @@ h2 {
 }
 
 .clock::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 15px;
   height: 15px;
@@ -101,6 +101,13 @@ h2 {
   background: #f44336;
   left: 50%;
 }
+
+/* .second,
+.minute,
+.hour {
+  transform-origin: bottom center;
+  transition: transform 0.25s ease-in-out;
+} */
 
 .digital-clock {
   font-size: 3.5rem;
