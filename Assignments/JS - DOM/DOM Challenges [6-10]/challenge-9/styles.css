@@ -66,3 +66,8 @@ body {
 .content {
   padding: 20px;
 }
+
+/* Prevent body scroll when menu is open */
+.no-scroll {
+  overflow: hidden;
+}
