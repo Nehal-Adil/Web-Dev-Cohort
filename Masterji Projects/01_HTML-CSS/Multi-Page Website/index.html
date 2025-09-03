@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="brand">Mini Site</div>
+        <a data-link href="index.html" class="active">Home</a>
+        <a data-link href="about.html">About</a>
+        <a data-link href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="card">
+        <h1>Welcome 👋</h1>
+        <p>
+          This is a tiny multi-page website with a shared navigation bar. Use
+          the links above to jump between pages. The active page is highlighted
+          automatically.
+        </p>
+        <a class="btn" href="about.html">Learn more</a>
+      </section>
+    </main>
+
+    <footer>© <span id="y"></span> Mini Site</footer>
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

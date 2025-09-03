@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About • Mini Site</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="brand">Mini Site</div>
+        <a data-link href="index.html">Home</a>
+        <a data-link href="about.html" class="active">About</a>
+        <a data-link href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="card">
+        <h1>About</h1>
+        <p>
+          This site is a simple example of a multi-page layout using semantic
+          HTML, a shared stylesheet, and a tiny script for the contact form.
+        </p>
+        <p>
+          Use this as a starter for small static sites, documentation, or
+          portfolios.
+        </p>
+      </section>
+    </main>
+
+    <footer>© <span id="y"></span> Mini Site</footer>
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
