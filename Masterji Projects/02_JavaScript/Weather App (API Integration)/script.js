@@ -13,7 +13,7 @@ const windValueText = document.querySelector(".wind-value-txt");
 const weatherSummaryImage = document.querySelector(".weather-summary-image");
 const currentDateText = document.querySelector(".current-date-text");
 
-const APIKEY = "cf8e371adf1b5f89f3d6bf4ed9b2584a";
+const APIKEY = "cf8e371ad84a";
 
 async function fetchCityData(city) {
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKEY}&units=metric`;
