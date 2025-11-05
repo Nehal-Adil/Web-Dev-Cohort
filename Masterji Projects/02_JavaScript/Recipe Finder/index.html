@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Finder</title>
+
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="bg-linear-to-br from-amber-100 to-orange-200 min-h-screen">
+    <main id="app" class="max-w-6xl mx-auto px-4 py-8 mt-4">
+      <h1
+        id="heading"
+        class="text-5xl font-bold text-center text-gray-800 my-6"
+      >
+        🍽️ Recipe Finder
+      </h1>
+
+      <!-- Search Bar -->
+      <div
+        id="search-bar"
+        class="flex items-center justify-center gap-4 w-full max-w-2xl mx-auto mt-10"
+      >
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search for a recipe (e.g., chicken, pasta)..."
+          class="w-full px-4 py-3 border border-gray-400 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-800"
+        />
+        <button
+          id="search-button"
+          class="w-auto px-6 py-3 bg-orange-400 hover:bg-orange-500 text-white font-medium rounded-xl shadow-sm hover:shadow-lg transition-all duration-300"
+        >
+          <!-- Lucide Search Icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-search-icon lucide-search"
+          >
+            <path d="m21 21-4.34-4.34" />
+            <circle cx="11" cy="11" r="8" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Results -->
+      <p
+        id="results-heading"
+        class="text-2xl font-semibold text-gray-800 text-center mt-10 hidden"
+      >
+        Search Results
+      </p>
+
+      <!-- Loading Spinner -->
+      <div id="loading" class="text-center mt-10 hidden">
+        <div
+          class="inline-block h-10 w-10 animate-spin rounded-full border-4 border-orange-600 border-t-transparent"
+        ></div>
+      </div>
+
+      <!-- Recipes Grid -->
+      <div id="recipes-container" class="grid grid-cols-3 gap-8 mt-8"></div>
+
+      <!-- Single Recipe View -->
+      <div id="single-recipe-view" class="hidden mt-10">
+        <button
+          id="back-button"
+          class="flex items-center gap-2 text-orange-600 font-medium mb-6 hover:text-orange-800"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-arrow-big-left-icon lucide-arrow-big-left"
+          >
+            <path
+              d="M13 9a1 1 0 0 1-1-1V5.061a1 1 0 0 0-1.811-.75l-6.835 6.836a1.207 1.207 0 0 0 0 1.707l6.835 6.835a1 1 0 0 0 1.811-.75V16a1 1 0 0 1 1-1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1z"
+            />
+          </svg>
+          Back to Recipes
+        </button>
+        <div
+          id="recipe-details"
+          class="bg-white rounded-2xl shadow-xl overflow-hidden"
+        ></div>
+      </div>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
