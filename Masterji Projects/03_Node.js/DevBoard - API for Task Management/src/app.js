@@ -4,6 +4,8 @@ import helmet from "helmet";
 import cookieParser from "cookie-parser";
 
 // Import routes
+import healthcheckRouter from "./routes/healthcheck.route.js";
+import authRouter from "./routes/auth.route.js";
 
 const app = express();
 
@@ -16,5 +18,8 @@ app.use(express.urlencoded({ extended: true }));
 
 // cookie parser middleware
 app.use(cookieParser());
+
+app.use("/api/v1/healthcheck", healthcheckRouter);
+app.use("/api/v1/auth", authRouter);
 
 export default app;
