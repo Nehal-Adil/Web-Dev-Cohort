@@ -5,6 +5,10 @@ import morgan from "morgan";
 import rateLimit from "express-rate-limit";
 
 // import Routes
+import authRouter from "./routes/auth.route.js";
+import bookRouter from "./routes/book.route.js";
+import reviewRouter from "./routes/review.route.js";
+import orderRouter from "./routes/order.route.js";
 
 const app = express();
 
@@ -40,6 +44,17 @@ app.get("/", (req, res) => {
 });
 
 // routes
+// ✅ CORRECT ORDER: Specific first, general last
+app.use("/api/v1/auth", authRouter);
+
+// Nested under /books/:bookId
+app.use("/api/v1/books/:bookId/reviews", reviewRouter);
+// for delete
+app.use("/api/v1/reviews", reviewRouter);
+
+app.use("/api/v1/books", bookRouter);
+
+app.use("/api/v1/orders", orderRouter);
 
 // 🚨 Centralized error handler
 app.use((err, req, res, next) => {

@@ -1,12 +1,5 @@
 import prisma from "../db/client.js";
-
-const validateBookId = (id) => {
-  const num = parseInt(id, 10);
-  if (isNaN(num) || num <= 0) {
-    throw new Error("Invalid book ID");
-  }
-  return num;
-};
+import validateId from "../utils/validateId.utils.js";
 
 const createBook = async (req, res) => {
   try {
@@ -32,6 +25,8 @@ const createBook = async (req, res) => {
 const getBooksByQuery = async (req, res) => {
   try {
     const { title, author, genre, minPrice, maxPrice, page = 1, limit = 10 } = req.query;
+
+    // console.log("req: ", req.query);
 
     // build filter dynamically
     const where = {};
@@ -70,7 +65,7 @@ const getBooksByQuery = async (req, res) => {
 
 const getBooksById = async (req, res) => {
   try {
-    const id = validateBookId(req.params.id);
+    const id = validateId(req.params.id);
     const book = await prisma.book.findUnique({
       where: { id },
       //   Nested reviews with author names
@@ -105,7 +100,7 @@ const getBooksById = async (req, res) => {
 
 const updateBook = async (req, res) => {
   try {
-    const id = validateBookId(req.params.id);
+    const id = validateId(req.params.id);
     const updateData = req.body;
 
     const book = await prisma.book.update({
@@ -130,7 +125,7 @@ const updateBook = async (req, res) => {
 
 const deleteBook = async (req, res) => {
   try {
-    const id = validateBookId(req.params.id);
+    const id = validateId(req.params.id);
     await prisma.book.delete({ where: { id } });
 
     res.status(200).json({
