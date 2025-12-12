@@ -66,7 +66,8 @@ const loginUser = async (req, res) => {
       });
     }
 
-    const accessToken = user.generateAccessToken();
+    const accessToken = await user.generateAccessToken();
+    // console.log(accessToken);
 
     res.status(200).json({
       success: true,

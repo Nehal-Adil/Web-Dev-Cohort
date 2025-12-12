@@ -57,10 +57,7 @@ const getTasksByProject = async (req, res) => {
       });
     }
 
-    const tasks = await Task.find({ project: projectId }).populate(
-      "onwer",
-      "username email",
-    );
+    const tasks = await Task.find({ project: projectId });
 
     // .populate('owner') tells Mongoose:
     // “After fetching the task, go look up the user with that _id and embed their data in the response.”

@@ -30,7 +30,7 @@ app.use(express.urlencoded({ extended: true }));
 // rate limiting
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 5, // limit each IP to 5 requests per windowMs
+  max: 10, // limit each IP to 10 requests per windowMs
   message: {
     success: false,
     message: "Too many requests from this IP, please try again later",
@@ -45,7 +45,7 @@ app.get("/", (req, res) => {
 
 // routes
 // ✅ CORRECT ORDER: Specific first, general last
-app.use("/api/v1/auth", authRouter);
+app.use("/api/v1/auth", limiter, authRouter);
 
 // Nested under /books/:bookId
 app.use("/api/v1/books/:bookId/reviews", reviewRouter);

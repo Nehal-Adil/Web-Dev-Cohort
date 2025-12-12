@@ -49,11 +49,13 @@ const getProjects = async (req, res) => {
 };
 
 const getProjectById = async (req, res) => {
+  const { id } = req.params;
+
   try {
     const project = await Project.findById({
-      _id: req.params.id,
+      _id: id,
       user: req.user._id,
-    }).populate("user", "-password");
+    });
 
     if (!project) {
       return res.status(404).json({
